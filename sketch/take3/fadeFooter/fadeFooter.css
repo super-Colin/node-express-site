@@ -1,0 +1,75 @@
+/* Mobile First */
+
+.fadeFooter-container{
+    --fadeFooter-padding: 1rem;
+
+    --fadeTrails-height: 4.5vh;
+    --fadeFooter-color: #a43;
+
+}
+
+
+
+
+
+
+.fadeFooter-container{
+
+    background-color: var(--fadeFooter-color);
+    
+    position: relative;
+
+    margin-top: calc(var(--fadeTrails-height) * 3.2)
+}
+
+.fadeFooter-trailsRoot,
+.fadeFooter-trailsRoot::before,
+.fadeFooter-trailsRoot::after{
+    display: block;
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    /* extra 0.1 for some safety overlap */
+    height: calc(var(--fadeTrails-height) * 1.1);
+    width: 100%;
+
+    border-radius: calc(var(--fadeTrails-height) * 0.1) calc(var(--fadeTrails-height) * 0.1) 0 0;
+
+    background-color: var(--fadeFooter-color);
+    box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.4);
+}
+
+.fadeFooter-trailsRoot::before {
+    top: calc(var(--fadeTrails-height) * -2);
+    z-index: 1;
+    filter: saturate(33%) brightness(200%);
+    opacity: .9;
+}
+.fadeFooter-trailsRoot::after {
+    top: calc(var(--fadeTrails-height) * -1);
+    z-index: 2;
+    filter: saturate(66%) brightness(150%);
+}
+.fadeFooter-trailsRoot{
+    top: calc(var(--fadeTrails-height) * -1);
+    z-index: 3;
+    filter: saturate(90%) brightness(110%);
+}
+
+
+
+.fadeFooter-content-container{
+    position: relative;
+    z-index: 4;
+
+    padding: var(--fadeFooter-padding);
+    padding-top: var(--fadeTrails-height);
+}
+
+.fadeFooter-content-title{
+    font-size: 2em;
+    text-align: center;
+}
