@@ -1,0 +1,24 @@
+extends layout
+include mixer
+include mixins/nested-mixer
+
+block content
+
+  style 
+    include blocks/fadeHeader/fadeHeader
+    include blocks/fadeHeader/fadeHeader.css
+
+    include blocks/fadeFooter/fadeFooter
+    include blocks/fadeFooter/fadeFooter.css
+
+
+  header 
+    +fadeHeader
+  
+  h1= title
+  p Welcome to #{title}
+
+  +mixer
+  +nested-mixer
+  footer
+    +fadeFooter

@@ -9,10 +9,6 @@
 }
 
 
-
-
-
-
 .fadeFooter-container{
 
     background-color: var(--fadeFooter-color);
@@ -58,8 +54,6 @@
     z-index: 3;
     filter: saturate(90%) brightness(110%);
 }
-
-
 
 .fadeFooter-content-container{
     position: relative;
