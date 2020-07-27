@@ -1,15 +1,10 @@
 /* Mobile First */
-
 .fadeHeader-container {
     --fadeHeader-padding: 1rem;
     --fadeHeader-color: #ED6C25;
 
     --fadeTrails-height: 1vh;
 }
-
-
-
-
 
 
 .fadeHeader-container {
@@ -44,13 +39,13 @@
 .fadeHeader-trailsRoot::before {
     bottom: calc(var(--fadeTrails-height) * -2);
     z-index: 1;
-    filter: saturate(33%) brightness(200%);
+    filter: saturate(33%) brightness(170%);
 }
 
 .fadeHeader-trailsRoot::after {
     bottom: calc(var(--fadeTrails-height) * -1);
     z-index: 2;
-    filter: saturate(66%) brightness(150%);
+    filter: saturate(66%) brightness(140%);
 }
 
 .fadeHeader-trailsRoot {

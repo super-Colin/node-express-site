@@ -1,0 +1,162 @@
+body.darkMode-active {
+    /* reverse the dark and light colors */
+    --brand_color-darkAccent1: #EFAF5E;
+    --brand_color-lightAccent1: #B9514A;
+    --brand_color-darkShade1: #F2ECE7;
+    --brand_color-lightShade1: #392E42;
+}
+
+:root {
+    /* font-size: 16px; */
+    /* font-size: calc(15px + 1vw); */
+    font-size: calc(3.89vw + 2px); /* 16px at 360px VW */
+    
+
+    /* Brand Vars */
+
+    /* ===--- Colors ---=== */
+    /* Colors have a constant for dark mode compatibility */
+
+    --brand_color-lightShade1-constant: #F2ECE7;
+    --brand_color-lightShade1: #F2ECE7;
+    /* Light shades
+    Use this color as the background for your dark-on-light designs,
+    or the text color of an inverted design. */
+
+    --brand_color-lightAccent1-constant: #EFAF5E;
+    --brand_color-lightAccent1: #EFAF5E;
+    /* Light accent
+    Accent colors can be used to bring attention to design elements 
+    by contrasting with the rest of the palette. */
+
+    --brand_color-main1-constant: #ED6C25;
+    --brand_color-main1: #ED6C25;
+    /* Main brand color
+    This color should be eye-catching but not harsh.
+    It can be liberally applied to your layout as its main identity. */
+
+    --brand_color-darkAccent1-constant: #B9514A;
+    --brand_color-darkAccent1: #B9514A;
+    /* Dark accent
+    Another accent color to consider.
+    Not all colors have to be used - sometimes a simple color scheme works best. */
+   
+    --brand_color-darkShade1-constant: #392E42;
+    --brand_color-darkShade1: #392E42;
+    /* Dark shades
+    Use as the text color for dark-on-light designs, 
+    or as the background for inverted designs. */
+
+
+
+    /* ===--- Globals ---=== */
+
+
+    /* Timing */
+    --global_timing-transition-duration: 1s;
+
+    /* Spacing */
+    --global_spacing-smaller: .3rem;
+    /* smaller spacing is best for a small, subtle nudge on something */
+    --global_spacing-small: .6rem;
+    /* small spacing is for good for spacing under a small h tag (h3-ish) */
+    --global_spacing-medium: 1.2rem;
+    /* medium spacing is your go to for most padding and margins */
+    --global_spacing-large: 2rem;
+    /* large spacing are more for vertical spacing(margin) from block to block or large titles */
+    --global_spacing-larger: 2.6rem;
+    /* larger spacing are more for vertical spacing(margin) from section to section */
+
+
+    /* Colors */
+    --global_color-sucess: #2d2;
+    --global_color-warning: #d62;
+    --global_color-danger: #d22;
+
+    --global_color-white1: #eee;
+    --global_color-lightGray1: #ccc;
+    --global_color-gray1: #888;
+    --global_color-darkGray1: #444;
+    --global_color-black1: #111;
+
+ 
+    /* Fonts */
+    --global_fontSize-title-small: 1.6rem;
+    --global_fontSize-title-medium: 2rem;
+    --global_fontSize-title-large: 2.4rem;
+    --global_fontSize-body-small: .9rem;
+    --global_fontSize-body-medium: 1.1rem;
+    --global_fontSize-body-large: 1.4rem;
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+}
+body{
+    background-color: var(--brand_color-lightShade1);
+    color: var(--brand_color-darkShade1);
+}
+
+
+li {
+    list-style: none;
+}
+
+@media(min-width: 375px) {
+    :root {
+        font-size: 16px;
+
+        --global_spacing-main: 3.75rem;
+        /* 60px */
+    }
+}
+
+@media(min-width: 720px) {
+    :root {
+    font-size: calc(15px + 0.5vw);
+        
+        --global_spacing-main: 4.375rem;
+
+        --global_fontSize-h1: 2.7rem;
+        --global_fontSize-h2: 2.2rem;
+        --global_fontSize-h3: 1.9rem;
+        --global_fontSize-h4: 1.6rem;
+        --global_fontSize-p: 1.2rem;
+
+    }
+
+
+}
+
+@media(min-width: 1020px) {
+    :root {
+        --global_spacing-main: 5rem;
+
+        --global_fontSize-h1: 2.9rem;
+        --global_fontSize-h2: 2.4rem;
+        --global_fontSize-h3: 1.9rem;
+        --global_fontSize-h4: 1.6rem;
+        --global_fontSize-p: 1.4rem;
+    }
+
+}
+
+@media(min-width: 1320px) {
+    :root {
+        --global_spacing-main: 6.25rem;
+
+        --global_fontSize-h1: 3rem;
+        --global_fontSize-h2: 2.5rem;
+        --global_fontSize-h3: 2rem;
+        --global_fontSize-h4: 1.7rem;
+        --global_fontSize-p: 1.5rem;
+    }
+
+}

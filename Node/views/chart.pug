@@ -1,7 +1,7 @@
 extends layout
 
 block content
-
+  script(src="/javascripts/d3.min.js")
   style 
     include blocks/fadeHeader/fadeHeader
     include blocks/fadeHeader/fadeHeader.css
@@ -9,25 +9,26 @@ block content
     include blocks/fadeFooter/fadeFooter
     include blocks/fadeFooter/fadeFooter.css
 
-    include blocks/hero/hero
-    include blocks/hero/hero.css
+    include blocks/d3Test/d3Test
+    include blocks/d3Test/d3Test.css
 
-    include blocks/portfolio/portfolio-all
-    include blocks/portfolio/portfolio.css
 
   header 
     +fadeHeader
 
-
-  +hero
+  //- section
   
-  //- h1= title
-  //- p Welcome to #{title}
- 
+  h1= title
+  p Welcome to #{title}
 
-  +portfolio-all
-
+  div
+    +d3Test
+  
 
 
   footer
     +fadeFooter
+
+
+
+
