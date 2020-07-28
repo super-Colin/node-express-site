@@ -42,7 +42,7 @@
     top: calc(var(--fadeTrails-height) * -2);
     z-index: 1;
     filter: saturate(33%) brightness(170%);
-    /* opacity: .9; */
+    opacity: .8;
 }
 .fadeFooter-trailsRoot::after {
     top: calc(var(--fadeTrails-height) * -1);

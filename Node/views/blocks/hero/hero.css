@@ -1,0 +1,27 @@
+
+.hero-container {
+    --hero-padding: var(--global_spacing-medium);
+}
+
+.hero-container * + *{margin-top: var(--hero-padding)}
+
+
+
+
+.hero-container{
+    padding: var(--hero-padding);
+}
+
+.hero-container h1{
+    text-align: center;
+}
+
+.hero-skillsList-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.hero-skillsList-container ul {
+    display: inline-block;
+}

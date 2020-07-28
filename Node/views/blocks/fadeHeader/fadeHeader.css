@@ -40,6 +40,7 @@
     bottom: calc(var(--fadeTrails-height) * -2);
     z-index: 1;
     filter: saturate(33%) brightness(170%);
+    opacity: 0.8;
 }
 
 .fadeHeader-trailsRoot::after {

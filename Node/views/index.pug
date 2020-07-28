@@ -6,17 +6,21 @@ block content
     include blocks/fadeHeader/fadeHeader
     include blocks/fadeHeader/fadeHeader.css
 
+    include blocks/triangleHeader/triangleHeader
+    include blocks/triangleHeader/triangleHeader.css
+
     include blocks/fadeFooter/fadeFooter
     include blocks/fadeFooter/fadeFooter.css
 
     include blocks/hero/hero
     include blocks/hero/hero.css
 
-    include blocks/portfolio/portfolio-all
+    include blocks/portfolio/portfolio-listing
     include blocks/portfolio/portfolio.css
 
   header 
-    +fadeHeader
+    //- +fadeHeader
+    +triangleHeader
 
 
   +hero
@@ -25,7 +29,7 @@ block content
   //- p Welcome to #{title}
  
 
-  +portfolio-all
+  //- +portfolio-listing
 
 
 
