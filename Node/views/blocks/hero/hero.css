@@ -8,20 +8,182 @@
 
 
 
-.hero-container{
+/* .hero-container{
+    padding: var(--hero-padding);
+} */
+
+.heroUpper-container{
+    min-height: 40vh;
     padding: var(--hero-padding);
 }
 
 .hero-container h1{
+    font-size: var(--global_fontSize-title-large);
     text-align: center;
+    text-transform: capitalize;
 }
 
 .hero-skillsList-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
+    flex-wrap: wrap;
+    margin: 0;
 }
+.hero-skillsList-list{
+    margin-top: var(--global_spacing-large);
+}
+.hero-skillsList-list-titleWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    font-size: var(--global_fontSize-title-small);
+}
+.hero-skillsList-list-titleWrapper *{
+    margin-top: 0;
+}
 .hero-skillsList-container ul {
     display: inline-block;
+    min-width: 9em;
+    width: 100%;
+
+    font-size: var(--global_fontSize-body-medium);
 }
+.hero-skillsList-container ul li{
+    /* font-size: 1em; */
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+/* -----=== LOWER ===----- */
+
+.heroLower-container{
+    width: 100%;
+    height:33vh;
+    position: relative;
+    padding: var(--hero-padding);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('/images/downArrow3.png');
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.heroLower-title{
+    width: 100%;
+    text-align: center;
+    font-size: var(--global_fontSize-title-medium);
+    z-index: 2;
+}
+.heroLower-container .hero-skillsList-container{
+    position: relative;
+    z-index: 5;
+}
+.heroLower-container p{
+    font-size: var(--global_fontSize-body-large);
+}
+.heroLower-container .sc-heart{
+    position: relative;
+    /* width: 100%; */
+    min-height: 1em;
+    margin: 0 0.5em;
+    font-size: var(--global_fontSize-title-large);
+}
+.heroLower-container .sc-heart::before,
+.heroLower-container .sc-heart::after{
+    content: '';
+    display: block;
+    height: 0.5em;
+    width:0.25em;
+    position: absolute;
+    bottom: 0.25em;
+    left: 40%;
+
+    transform-origin: center;
+    transform: rotate(45deg);
+
+    border-radius: 50% 50% 0 0;
+    background-color: red;
+}
+.heroLower-container .sc-heart::after{
+    left: unset;
+    right: 40%;
+
+    transform-origin: center;
+    transform: rotate(-45deg);
+}
+
+.heroLower-arrowsBg-container{
+    height: 100%;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* z-index: 3; */
+}
+
+.heroLower-arrowsBg-upperLeft,
+.heroLower-arrowsBg-lowerLeft,
+.heroLower-arrowsBg-upperRight,
+.heroLower-arrowsBg-lowerRight{
+    width: 70vw;
+    height:100%;
+    position: absolute;
+    top: 50%;
+    margin:0;
+    background-color: var(--brand_color-darkShade1);
+    /* box-shadow: 0 0 10px 2px rgba(44, 44, 44, 0.8); */
+}
+.heroLower-arrowsBg-upperLeft,
+.heroLower-arrowsBg-upperRight{
+    top: unset;
+    bottom:90%;
+    box-shadow: none;
+}
+.heroLower-arrowsBg-upperLeft{
+    right: 50%;
+    transform-origin: bottom right;
+    transform: rotate(60deg);
+}
+.heroLower-arrowsBg-upperRight{
+    Left: 50%;
+    transform-origin: bottom left;
+    transform: rotate(-60deg);
+}
+.heroLower-arrowsBg-lowerLeft{
+    left: 0;
+    transform-origin: left top;
+    transform: rotate(30deg);
+    background: linear-gradient(-30deg, transparent, var(--brand_color-darkShade1));
+}
+.heroLower-arrowsBg-lowerRight{
+    right: 0;
+    transform-origin: right top;
+    transform: rotate(-30deg);
+    background: linear-gradient(30deg, transparent, var(--brand_color-darkShade1));
+
+}
+
+
+@media(min-width: 780px){
+    .hero-skillsList-container ul {
+        min-width: 10em;
+    }
+    .heroLower-container {
+        /* background-size: cover; */
+    }
+}
+
+

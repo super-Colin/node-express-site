@@ -11,6 +11,8 @@ body.darkMode-active {
     /* font-size: 16px; */
     /* font-size: calc(15px + 1vw); */
     font-size: calc(3.89vw + 2px); /* 16px at 360px VW */
+
+    
     
 
     /* Brand Vars */
@@ -83,10 +85,10 @@ body.darkMode-active {
 
  
     /* Fonts */
-    --global_fontSize-title-small: 1.6rem;
-    --global_fontSize-title-medium: 2rem;
+    --global_fontSize-title-small: 1.5rem;
+    --global_fontSize-title-medium: 1.9rem;
     --global_fontSize-title-large: 2.4rem;
-    --global_fontSize-body-small: .9rem;
+    --global_fontSize-body-small: .8rem;
     --global_fontSize-body-medium: 1.1rem;
     --global_fontSize-body-large: 1.3rem;
 
@@ -108,12 +110,39 @@ body{
     font-size: var(--global_fontSize-body-medium);
     max-width: 100vw;
     overflow-x: hidden;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 body > * + *{margin-top: var(--global_spacing-medium)}
 header{margin-top: 0;}
 
 img{max-width:100%}
+
+.sc-hexagon,
+.sc-hexagon::before,
+.sc-hexagon::after{
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 0.275em;
+    height: 0.5em;
+    /* margin-right:var(--global_spacing-small); */
+    margin-right: 0.6em;
+    background-color: var(--brand_color-main1-constant);
+}
+.sc-hexagon::before,
+.sc-hexagon::after{
+    transform-origin: center center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.sc-hexagon::before{
+    transform: rotate(120deg);
+}
+.sc-hexagon::after{
+    transform: rotate(-120deg);
+}
 
 li {list-style: none;}
 
@@ -126,9 +155,14 @@ li {list-style: none;}
     }
 }
 
+@media(min-width: 600px) {
+    :root{
+        font-size: calc(15px + 0.5vw);
+    }
+}
 @media(min-width: 720px) {
     :root {
-    font-size: calc(15px + 0.5vw);
+    /* font-size: calc(15px + 0.5vw); */
         
         --global_spacing-main: 4.375rem;
 

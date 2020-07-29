@@ -2,22 +2,83 @@
 mixin hero
 
     div.hero-container
-        h1 Favorite Technologies:
-        //- p Constantly solving problems and always improving, I have a passion for coding and I try to learn something new everyday. Some things I love to work with:
+        div.heroUpper-container
+            h1 Favorite Technologies:
+            //- p Constantly solving problems and always improving, I have a passion for coding and I try to learn something new everyday. Some things I love to work with:
+            //- p These are some things I truly enjoy working with:
 
-        div.hero-skillsList-container
-            ul
-                li Javascript
-                li CSS
-                li Python
-                li list item
-                li list item
-
-            ul
-                li Angular
-                li MongoDB
-            ul
-                li Angular
-                li MongoDB
+            div.hero-skillsList-container
 
 
+                div.hero-skillsList-list
+                    div.hero-skillsList-list-titleWrapper
+                        span.sc-hexagon
+                        h3 Langauges
+                    ul
+                        li 
+                            span.sc-hexagon 
+                            span Javascript
+                        li
+                            span.sc-hexagon 
+                            span CSS
+                        li
+                            span.sc-hexagon 
+                            span Python
+
+                div.hero-skillsList-list
+                    div.hero-skillsList-list-titleWrapper
+                        span.sc-hexagon
+                        h3 Stacks
+                    ul
+                        li
+                            span.sc-hexagon 
+                            span MEAN
+                        li
+                            span.sc-hexagon 
+                            span LAMP
+
+                div.hero-skillsList-list
+                    div.hero-skillsList-list-titleWrapper
+                        span.sc-hexagon
+                        h3 Frameworks
+                    ul
+                        li
+                            span.sc-hexagon 
+                            span Node.js
+                        li
+                            span.sc-hexagon 
+                            span Angular
+                        li
+                            span.sc-hexagon 
+                            span Wordpress Themes
+
+        div.heroLower-container
+
+            //- div.hero-skillsList-list
+            //-     div.hero-skillsList-list-titleWrapper
+            //-         span.sc-hexagon
+            //-         h3 Ongoing Projects
+            //-     ul
+            //-         li
+            //-             span.sc-hexagon 
+            //-             span Mentoring Python
+            //-         li
+            //-             span.sc-hexagon 
+            //-             span Improving my Portfolio
+            //-         li
+            //-             span.sc-hexagon 
+            //-             span 
+
+
+            h3.heroLower-title “No alarm clock needed<span class="sc-heart"> </span> My passion wakes me.”
+            //- p Coding is an art and I express myself with it everyday.
+                span.sc-heart
+            //- span.sc-heart
+
+            div.heroLower-arrowsBg-container
+                div.heroLower-arrowsBg-upperLeft
+                div.heroLower-arrowsBg-upperRight
+                div.heroLower-arrowsBg-lowerLeft
+                div.heroLower-arrowsBg-lowerRight
+
+    //- div(style="padding-bottom: 100vh;")
