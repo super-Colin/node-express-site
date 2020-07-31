@@ -124,7 +124,7 @@ img{max-width:100%}
     content: '';
     position: relative;
     display: inline-block;
-    width: 0.275em;
+    width: 0.288em;
     height: 0.5em;
     /* margin-right:var(--global_spacing-small); */
     margin-right: 0.6em;
