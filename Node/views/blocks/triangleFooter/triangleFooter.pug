@@ -8,11 +8,28 @@ mixin triangleFooter
         
         div.triangleFooter-topBar-container
             div.triangleFooter-topBar-bar
-            div.triangleFooter-topBar-leftBarAngle
+            div.triangleFooter-topBar-topBarAngle
+
+        div.triangleFooter-midBar-container
+            div.triangleFooter-midBar-bar
+            div.triangleFooter-midBar-midBarAngle
 
         div.triangleFooter-content-container
 
-            div.triangleFooter-content-form
+            div.triangleFooter-content-formContainer
+                h4.triangleFooter-content-formTitle Contact Me
+                label(for="yourEmail") Your Email:
+                input(type="text" id="yourEmail" name="yourEmail")
+
+                label(for="yourMessage") Message
+                textarea(name="yourMessage", rows="6")
+
+                button Submit
+
+            div.triangleFooter-content-social
+
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, saepe voluptatem alias, veritatis consequatur nam voluptatum facere vitae aspernatur itaque quo, corporis illum libero magni illo. Laudantium tenetur officiis velit.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, saepe voluptatem alias, veritatis consequatur nam voluptatum facere vitae aspernatur itaque quo, corporis illum libero magni illo. Laudantium tenetur officiis velit.
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, saepe voluptatem alias, veritatis consequatur nam voluptatum facere vitae aspernatur itaque quo, corporis illum libero magni illo. Laudantium tenetur officiis velit.
 
         div.triangleFooter-bottomRightAngle-container
