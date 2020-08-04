@@ -3,9 +3,10 @@
     --triangleFooter-padding: var(--global_spacing-medium);
     --triangleFooter-color: var(--brand_color-main1);
     --triangleFooter-barHeight: 2rem;
+    --triangleFooter-submitButtonColor: var(--brand_color-darkShade1);
 
 }
-.triangleFooter-container * + *{margin-top: var(--triangleFooter-padding);}
+.triangleFooter-container * + *{margin-top: var(--global_spacing-owl);}
 
 .triangleFooter-container{
     position: relative;
@@ -137,30 +138,14 @@
     font-size: var(--global_fontSize-body-medium);
 }
 
-.triangleFooter-content-formContainer button{
+.triangleFooter-content-formContainer .sc-button{
     font-size: var(--global_fontSize-body-large);
     padding: var(--global_spacing-small);
 
-    background-color: var(--brand_color-darkShade1);
+    background-color: var(--triangleFooter-submitButtonColor);
     color: var(--brand_color-lightShade1);
-
-    border: none;
-    border-right: 0 solid grey;
-    border-bottom: 0 solid grey;
-    border-radius: 0.2em ;
-
-    transform: perspective(500px) translate3d(0);
-    transition:
-        border-radius var(--global_timing-transition-duration),
-        transform var(--global_timing-transition-duration),
-        box-shadow var(--global_timing-transition-duration);
-
 }
-.triangleFooter-content-formContainer button:hover{
-    box-shadow: 0 0 10px 2px rgba(44, 44, 44, 0.7);
-    transform: perspective(500px) translate3d(0, 0, 5rem);
-    border-radius: 0.4em ;
-}
+
 
 .triangleFooter-bottomRightAngle-container{
     height: 12em;

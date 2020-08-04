@@ -3,7 +3,7 @@
     --hero-padding: var(--global_spacing-medium);
 }
 
-.hero-container * + *{margin-top: var(--hero-padding)}
+.hero-container * + *{margin-top: var(--global_spacing-owl)}
 
 
 

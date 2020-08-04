@@ -3,30 +3,28 @@ extends layout
 block content
 
   style 
-    include blocks/fadeHeader/fadeHeader
-    include blocks/fadeHeader/fadeHeader.css
-
     include blocks/triangleHeader/triangleHeader
     include blocks/triangleHeader/triangleHeader.css
-
-    include blocks/fadeFooter/fadeFooter
-    include blocks/fadeFooter/fadeFooter.css
 
     include blocks/hero/hero
     include blocks/hero/hero.css
 
-    include blocks/portfolio/portfolio-listing
-    include blocks/portfolio/portfolio.css
+    include blocks/slideInProjects/slideInProjects
+    include blocks/slideInProjects/slideInProjects.css
 
     include blocks/triangleFooter/triangleFooter
     include blocks/triangleFooter/triangleFooter.css
+
+
 
   header 
     //- +fadeHeader
     +triangleHeader
 
-
+  style .hero-container + div{margin-top: 0;}
   +hero
+
+  +slideInProjects
   
   //- h1= title
   //- p Welcome to #{title}
