@@ -57,7 +57,9 @@ body.darkMode-active {
 
 
     /* Timing */
-    --global_timing-transition-duration: 1s;
+    --global_timing-transitionDuration-large: 1.2s;
+    --global_timing-transitionDuration-medium: 0.8s;
+    --global_timing-transitionDuration-small: .4s;
 
 
     /* Spacing */
@@ -73,7 +75,7 @@ body.darkMode-active {
     /* larger spacing are more for vertical spacing(margin) from section to section */
     
     /* --global_spacing-owl: var(--global_spacing-medium); */
-    --global_spacing-owl: 1.5em;
+    --global_spacing-owl: 1.3em;
     /* Lobotomized owl spacing for easy dynamic margin-top */
 
 
@@ -174,10 +176,7 @@ a{text-decoration: none;}
 
 @media(min-width: 376px) {
     :root {
-        /* font-size: 16px; */
-
         --global_spacing-main: 3.75rem;
-        /* 60px */
     }
 }
 
@@ -188,16 +187,7 @@ a{text-decoration: none;}
 }
 @media(min-width: 720px) {
     :root {
-    /* font-size: calc(15px + 0.5vw); */
-        
-        --global_spacing-main: 4.375rem;
-
-        --global_fontSize-h1: 2.7rem;
-        --global_fontSize-h2: 2.2rem;
-        --global_fontSize-h3: 1.9rem;
-        --global_fontSize-h4: 1.6rem;
-        --global_fontSize-p: 1.2rem;
-
+        font-size: calc(15px + 1vw);
     }
 
 
@@ -205,26 +195,14 @@ a{text-decoration: none;}
 
 @media(min-width: 1020px) {
     :root {
-        --global_spacing-main: 5rem;
-
-        --global_fontSize-h1: 2.9rem;
-        --global_fontSize-h2: 2.4rem;
-        --global_fontSize-h3: 1.9rem;
-        --global_fontSize-h4: 1.6rem;
-        --global_fontSize-p: 1.4rem;
+        /* font-size: calc(15px + 0.5vw); */
     }
 
 }
 
 @media(min-width: 1320px) {
     :root {
-        --global_spacing-main: 6.25rem;
 
-        --global_fontSize-h1: 3rem;
-        --global_fontSize-h2: 2.5rem;
-        --global_fontSize-h3: 2rem;
-        --global_fontSize-h4: 1.7rem;
-        --global_fontSize-p: 1.5rem;
     }
 
 }
