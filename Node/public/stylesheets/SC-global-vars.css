@@ -10,7 +10,7 @@ body.darkMode-active {
 :root {
     /* font-size: 16px; */
     /* font-size: calc(15px + 1vw); */
-    font-size: calc(3.89vw + 2px); /* 16px at 360px VW */
+    font-size: calc(3.89vw + 2.5px); /* 16px at 360px VW */
 
     
     
@@ -52,14 +52,17 @@ body.darkMode-active {
     or as the background for inverted designs. */
 
 
+    --brand_image-parallax1: url('/images/downArrow3.png');
+
+
 
     /* ===--- Globals ---=== */
 
 
     /* Timing */
-    --global_timing-transitionDuration-large: 1.2s;
-    --global_timing-transitionDuration-medium: 0.8s;
     --global_timing-transitionDuration-small: .4s;
+    --global_timing-transitionDuration-medium: 0.8s;
+    --global_timing-transitionDuration-large: 1.2s;
 
 
     /* Spacing */
@@ -95,12 +98,12 @@ body.darkMode-active {
  
     /* Fonts */
     --global_fontSize-body-small: .8rem;
-    --global_fontSize-body-medium: 1.1rem;
+    --global_fontSize-body-medium: 1rem;
     --global_fontSize-body-large: 1.3rem;
 
-    --global_fontSize-title-small: 1.5rem;
-    --global_fontSize-title-medium: 1.9rem;
-    --global_fontSize-title-large: 2.4rem;
+    --global_fontSize-title-small: 1.4rem;
+    --global_fontSize-title-medium: 1.8rem;
+    --global_fontSize-title-large: 2.5rem;
 }
 
 
@@ -159,9 +162,9 @@ img{max-width:100%}
 
     transform: perspective(500px) translate3d(0);
     transition:
-        border-radius var(--global_timing-transition-duration),
-        transform var(--global_timing-transition-duration),
-        box-shadow var(--global_timing-transition-duration);
+        border-radius var(--global_timing-transitionDuration-small),
+        transform var(--global_timing-transitionDuration-small),
+        box-shadow var(--global_timing-transitionDuration-small);
 
 }
 .sc-button:hover {
@@ -170,13 +173,24 @@ img{max-width:100%}
     border-radius: 0.4em;
 }
 
+.sc-parallaxBg{
+    background-image: var(--brand_image-parallax1);
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
 li {list-style: none;}
 
-a{text-decoration: none;}
+/* a{text-decoration: none;} */
+.sc-lightLink{color: var(--brand_color-lightAccent1);}
+.sc-darkLink{color: var(--brand_color-darkAccent1);}
+
 
 @media(min-width: 376px) {
     :root {
-        --global_spacing-main: 3.75rem;
+        /* --global_spacing-main: 3.75rem; */
     }
 }
 

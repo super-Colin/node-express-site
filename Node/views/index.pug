@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  style 
+  style
     include blocks/triangleHeader/triangleHeader
     include blocks/triangleHeader/triangleHeader.css
 
@@ -12,16 +12,23 @@ block content
     include blocks/slideInProjects/slideInProjects
     include blocks/slideInProjects/slideInProjects.css
 
+    include blocks/quickAbout/quickAbout
+    include blocks/quickAbout/quickAbout.css
+
     include blocks/triangleFooter/triangleFooter
     include blocks/triangleFooter/triangleFooter.css
-
+    | /* Use padding instead of margin for parallax continuity across blocks */
+    | .hero-container + div{margin-top: 0;}
+    | .quickAbout-container{margin-top: 0;padding-bottom:calc(var(--global_spacing-owl) + var(--global_spacing-medium));padding-top:calc(var(--global_spacing-owl) + var(--global_spacing-medium));}
+    | footer{margin-top:0;}
   header 
     +triangleHeader
 
-  style .hero-container + div{margin-top: 0;}
   +hero
 
   +slideInProjects
 
-  footer
+  +quickAbout
+
+  footer.sc-parallaxBg
     +triangleFooter

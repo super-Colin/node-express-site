@@ -43,7 +43,7 @@
     height: 12em;
     position: absolute;
     bottom:100%;
-    left:0;
+    left:-6px;
 
     transform-origin: right bottom;
     transform: rotate(-5deg);

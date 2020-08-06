@@ -2,6 +2,7 @@
 .slideInProjects-container{
     --slideInProjects-lightBg: var(--global_color-midDarkGray1);
     --slideInProjects-darkBg: var(--global_color-darkGray1);
+    
     --slideInProjects-links-padding: var(--global_spacing-small);
     --slideInProjects-buttonFadeIn: var(--global_timing-transitionDuration-small);
 
@@ -9,12 +10,16 @@
     background-color: var(--slideInProjects-lightBg);
     padding: var(--global_spacing-medium);
 
-    border-top: 10px solid var(--brand_color-main1);
+    border-top: 0.5rem solid var(--brand_color-main1);
 }
 .slideInProjects-container * + *{margin-top: var(--global_spacing-owl);}
 
 .slideInProjects-projects-container{
     /* background-color: var(--slideInProjects-lightBg); */
+}
+.slideInProjects-projects-title{
+    text-align: center;
+    font-size: var(--global_fontSize-title-large);
 }
 .slideInProjects-projects-project{
     display: flex;
@@ -23,34 +28,39 @@
 
     padding: var(--global_spacing-small);
 
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     border: 0.1em solid #111;
     background-color: var(--slideInProjects-darkBg);
 }
 
 .slideInProjects-projects-project-image{
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .slideInProjects-projects-project-image img{
     width: 100%;
+    max-height: 18em;
+
     height: auto;
-    /* height: 100%;
-    object-fit: contain; */
+    /* height: 100%; */
+    object-fit: contain;
+    /* object-fit: cover; */
+    object-position: top;
 }
 
 
 .slideInProjects-projects-project-textContainer{
     width: 100%;
-    margin-top: 0;
+    /* margin-top: 0; */
     text-align: center;
 }
 
 .slideInProjects-projects-project-title {
     width: 100%;
-    font-size: var(--global_fontSize-title-medium);
+    font-size: var(--global_fontSize-title-small);
     
 }
 
@@ -63,7 +73,6 @@
 .slideInProjects-projects-project-links a{
     display: inline-flex;
     align-items: center;
-    /* max-height: 2rem; */
     margin-top: 0;
     padding: var(--slideInProjects-links-padding);
 
@@ -81,7 +90,7 @@
 }
 
 .slideInProjects-projects-project-about{
-    font-size: var(--global_fontSize-body-small);
+    font-size: var(--global_fontSize-body-medium);
 }
 
 @media(min-width: 500px){
@@ -89,6 +98,7 @@
         max-width: 40%;
     }
     .slideInProjects-projects-project-textContainer {
+        margin-top: 0;
         width: 55%;
         display: flex;
         flex-direction: column;
