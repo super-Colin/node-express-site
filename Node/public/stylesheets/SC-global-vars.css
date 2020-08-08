@@ -12,10 +12,33 @@ body.darkMode-active {
     /* font-size: calc(15px + 1vw); */
     font-size: calc(3.89vw + 2.5px); /* 16px at 360px VW */
 
-    
-    
 
     /* Brand Vars */
+
+
+    /* ===--- Fonts ---=== */
+    /* Import Link and  Available Fonts*/
+    /* <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; */
+
+    --brand_fontFamily-title: 'Oswald', sans-serif;
+    --brand_fontWeight-title-main: 500;
+
+    --brand_fontFamily-body: 'Roboto', sans-serif;
+    --brand_fontWeight-body-main: 400;
+
+    --brand_fontFamily-accent: 'Montserrat', sans-serif;
+    --brand_fontWeight-accent-main: 400;
+
+    
 
     /* ===--- Colors ---=== */
     /* Colors have a constant for dark mode compatibility */
@@ -61,8 +84,8 @@ body.darkMode-active {
 
     /* Timing */
     --global_timing-transitionDuration-small: .4s;
-    --global_timing-transitionDuration-medium: 0.8s;
-    --global_timing-transitionDuration-large: 1.2s;
+    --global_timing-transitionDuration-medium: 0.9s;
+    --global_timing-transitionDuration-large: 1.4s;
 
 
     /* Spacing */
@@ -102,7 +125,7 @@ body.darkMode-active {
     --global_fontSize-body-large: 1.3rem;
 
     --global_fontSize-title-small: 1.4rem;
-    --global_fontSize-title-medium: 1.8rem;
+    --global_fontSize-title-medium: 1.7rem;
     --global_fontSize-title-large: 2.5rem;
 }
 
@@ -117,18 +140,30 @@ body.darkMode-active {
 }
 html,
 body{
-    background-color: var(--brand_color-darkShade1);
-    color: var(--brand_color-lightShade1);
-    font-size: var(--global_fontSize-body-medium);
     max-width: 100vw;
     overflow-x: hidden;
-    /* font-family: Arial, Helvetica, sans-serif; */
+
+    background-color: var(--brand_color-darkShade1);
+
+    color: var(--brand_color-lightShade1);
+    font-family: var(--brand_fontFamily-body);
+    font-weight: var(--brand_fontFamily-body-main);
+    font-size: var(--global_fontSize-body-medium);
 }
 
 body > * + *{margin-top: var(--global_spacing-owl)}
 header{margin-top: 0;}
 
 img{max-width:100%}
+
+.sc-title{
+    font-family: var(--brand_fontFamily-title);
+    font-weight: var(--brand_fontWeight-title-main);
+}
+.sc-accent {
+    font-family: var(--brand_fontFamily-accent);
+    font-weight: var(--brand_fontWeight-accent-main);
+}
 
 .sc-hexagon,
 .sc-hexagon::before,
@@ -173,6 +208,19 @@ img{max-width:100%}
     border-radius: 0.4em;
 }
 
+.sc-hr{
+    width: 100%;
+    height: 2px;
+}
+.sc-hr::after{
+    content:"";
+    display: block;
+    width: var(--global_spacing-larger);
+    height: 2px;
+    background-color: var(--brand_color-darkShade1);
+    margin: 0 auto;
+}
+
 .sc-parallaxBg{
     background-image: var(--brand_image-parallax1);
     background-attachment: fixed;
@@ -188,10 +236,9 @@ li {list-style: none;}
 .sc-darkLink{color: var(--brand_color-darkAccent1);}
 
 
+
 @media(min-width: 376px) {
-    :root {
-        /* --global_spacing-main: 3.75rem; */
-    }
+
 }
 
 @media(min-width: 600px) {
@@ -208,15 +255,11 @@ li {list-style: none;}
 }
 
 @media(min-width: 1020px) {
-    :root {
-        /* font-size: calc(15px + 0.5vw); */
-    }
+
 
 }
 
 @media(min-width: 1320px) {
-    :root {
 
-    }
 
 }

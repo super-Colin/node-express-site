@@ -111,11 +111,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .triangleFooter-content-formTitle{
-    font-size: var(--global_fontSize-title-small);
+    width: 100%;
+    text-align: center;
+    font-size: var(--global_fontSize-title-large);
 }
 .triangleFooter-content-formContainer label{
     display: block;
@@ -130,6 +132,7 @@
 
     font-size: var(--global_fontSize-body-medium);
 }
+
 
 .triangleFooter-content-formContainer .sc-button{
     font-size: var(--global_fontSize-body-large);
@@ -166,4 +169,23 @@
     filter: brightness(110%);
 
     box-shadow: 0 0 10px 2px rgba(44, 44, 44, 0.8);
+}
+
+
+
+@media(min-width: 500px){
+    .triangleFooter-content-formContainer {
+        padding: var(--global_spacing-large);
+    }
+    .triangleFooter-content-formContainer .triangleFooter-content-emailLabel,
+    .triangleFooter-content-formContainer .triangleFooter-content-emailInput {
+        width: calc(50% - var(--triangleFooter-padding));
+    }
+    .triangleFooter-content-formContainer .triangleFooter-content-emailLabel{
+        text-align: end;
+        margin-right:var(--triangleFooter-padding);
+    }
+    .triangleFooter-content-formContainer .triangleFooter-content-emailInput{
+        margin-left:var(--triangleFooter-padding) ;
+    }
 }

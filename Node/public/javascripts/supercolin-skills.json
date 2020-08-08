@@ -1,5 +1,6 @@
 {
     "superColinSkills" : {
+        "Congrats!":{ "/:FLAG;":"123456789:/"},
 
         "Coding":{
             "Languages?":{
@@ -9,7 +10,6 @@
                 "C++":{},
                 "Python":{},
                 "PHP":{},
-                "":{}
             },
             "Stacks":{
                 "LAMP":{
@@ -41,16 +41,11 @@
                     "Angular 9":{
                         "Modular Code":{},
                         "Templates":{},
-                        "":{},
-                        "":{},
-                        "":{}
                     },
                     "Node.js":{
                         "Emviornment Variables":{},
-                        "":{},
                         "jsdom":{},
-                        "chalk":{},
-                        "":{}
+                        "chalk":{}
                     }
                 }
             },
@@ -80,8 +75,7 @@
                     },
                     "SASS": {},
                     "LESS": {},
-                    "BEM":{},
-                    "":{}
+                    "BEM":{}
                 },
                 "Javascript":{
                     "ECMAScript 6":{
@@ -91,12 +85,7 @@
                         "Default Parameters":{}
                     },
                     "D3":{},
-                    "JSON":{},
-                    "":{},
-                    "":{},
-                    "":{},
-                    "":{},
-                    "":{}
+                    "JSON":{}
                 }
             },
 
@@ -105,9 +94,7 @@
                 "Persistant Storage":{
                     "MongoDB":{}
                 },
-                "Data Architecture": {},
-                "":{},
-                "":{}
+                "Data Architecture": {}
             }
 
         },
@@ -115,20 +102,13 @@
 
         "Design" : {
             "Marketing": {
-                "Brand Identity":{},
-                "":{},
-                "":{},
-                "":{}
+                "Brand Identity":{}
             },
             "Visual":{
-                "Color Schemes":{},
-                "":{},
-                "":{}
+                "Color Schemes":{}
             },
             "User Experience":{
-                "Accessibility":{},
-                "":{},
-                "":{}
+                "Accessibility":{}
             },
             "User Interface": {
                 "Accessibility":{}

@@ -1,0 +1,20 @@
+
+@keyframes slideIn{
+    0%{
+        /* background:red; */
+        left: -100vw;
+    }
+    /* 50%{
+        background:green;
+    } */
+    100%{
+        /* background:blue; */
+        left: 0;
+    }
+}
+.slideInProjects-slidingIn{
+    position: relative;
+    animation-name:slideIn;
+    animation-duration: var(--global_timing-transitionDuration-large);
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}

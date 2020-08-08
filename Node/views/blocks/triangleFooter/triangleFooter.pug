@@ -17,11 +17,16 @@ mixin triangleFooter
         div.triangleFooter-content-container
 
             div.triangleFooter-content-formContainer
-                h4.triangleFooter-content-formTitle Contact Me
-                label(for="yourEmail") Your Email:
-                input(type="text" id="yourEmail" name="yourEmail")
+                h4.triangleFooter-content-formTitle.sc-title Contact Me
 
-                label(for="yourMessage") Message
+                div.sc-hr
+
+                label(for="yourEmail").triangleFooter-content-emailLabel.sc-accent Your Email:
+                input.triangleFooter-content-emailInput(type="text" id="yourEmail" name="yourEmail")
+
+                div.sc-hr
+                
+                label(for="yourMessage").sc-accent Message:
                 textarea(name="yourMessage", rows="6")
 
                 button.sc-button Submit
