@@ -61,8 +61,10 @@ body.darkMode-active {
     This color should be eye-catching but not harsh.
     It can be liberally applied to your layout as its main identity. */
 
-    --brand_color-darkAccent1-constant: #B9514A;
-    --brand_color-darkAccent1: #B9514A;
+    --brand_color-darkAccent1-constant: #99312A;
+    /* --brand_color-darkAccent1: #B9514A; */
+    /* --brand_color-darkAccent1: #A9413A; */
+    --brand_color-darkAccent1: #99312A;
     /* Dark accent
     Another accent color to consider.
     Not all colors have to be used - sometimes a simple color scheme works best. */
@@ -120,9 +122,10 @@ body.darkMode-active {
 
  
     /* Fonts */
-    --global_fontSize-body-small: .8rem;
-    --global_fontSize-body-medium: 1rem;
-    --global_fontSize-body-large: 1.3rem;
+    --global_fontSize-body-smaller: .6rem;
+    --global_fontSize-body-small: .8rem; /* keep it to these main 3 if possible */
+    --global_fontSize-body-medium: 1rem; /* keep it to these main 3 if possible */
+    --global_fontSize-body-large: 1.3rem; /* keep it to these main 3 if possible */
 
     --global_fontSize-title-small: 1.4rem;
     --global_fontSize-title-medium: 1.7rem;
@@ -163,6 +166,11 @@ img{max-width:100%}
 .sc-accent {
     font-family: var(--brand_fontFamily-accent);
     font-weight: var(--brand_fontWeight-accent-main);
+}
+.sc-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sc-hexagon,
@@ -232,8 +240,10 @@ img{max-width:100%}
 li {list-style: none;}
 
 /* a{text-decoration: none;} */
+.sc-whiteLink{color: var(--brand_color-lightShade1);}
 .sc-lightLink{color: var(--brand_color-lightAccent1);}
 .sc-darkLink{color: var(--brand_color-darkAccent1);}
+.sc-blackLink{color: var(--brand_color-darkShade1);}
 
 
 

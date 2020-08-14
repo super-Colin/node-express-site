@@ -1,9 +1,7 @@
 
 .triangleFooter-container{
     --triangleFooter-padding: var(--global_spacing-medium);
-    --triangleFooter-color-bg: var(--brand_color-main1);
-    /* --triangleFooter-color-links: var(--brand_color-darkAccent1); */
-    --triangleFooter-color-links: white;
+    --triangleFooter-color: var(--brand_color-main1);
     --triangleFooter-barHeight: 2rem;
     --triangleFooter-submitButtonColor: var(--brand_color-darkShade1);
 
@@ -50,7 +48,7 @@
     transform-origin: right bottom;
     transform: rotate(-5deg);
     
-    background-color: var(--triangleFooter-color-bg);
+    background-color: var(--triangleFooter-color);
     filter: brightness(70%);
 }
 
@@ -68,7 +66,7 @@
     margin:0;
     width: 50%;
     height: var(--triangleFooter-barHeight);
-    background-color: var(--triangleFooter-color-bg);
+    background-color: var(--triangleFooter-color);
     filter: brightness(90%);
 }
 .triangleFooter-topBar-bar,
@@ -102,14 +100,13 @@
     /* margin-top: calc(var(--triangleFooter-barHeight) * -1); */
 
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 
     padding: var(--triangleFooter-padding);
-    background-color: var(--triangleFooter-color-bg);
+    background-color: var(--triangleFooter-color);
 }
 
-.triangleFooter-content-innerContainer{
+.triangleFooter-content-formContainer{
     margin-top: calc(var(--triangleFooter-barHeight) * -1); /* to bring it up into the top bar */
     
     width: 100%;
@@ -118,43 +115,32 @@
     justify-content: space-around;
 }
 
-.triangleFooter-content-title{
+.triangleFooter-content-formTitle{
     width: 100%;
     text-align: center;
     font-size: var(--global_fontSize-title-large);
 }
-.triangleFooter-content-socialLink{
-    width: 80%;
-    color: var(--triangleFooter-color-links);
-}
-.triangleFooter-content-socialLink *{
-    margin-top: 0;
-}
-
-.triangleFooter-content-socialLink svg {
-    display: inline-block;
-    max-width: 1.5em;
-    max-height: 1.5em;
-    margin-right: var(--slideInProjects-links-padding);
-    fill: var(--triangleFooter-color-links);
-    margin-right: var(--global_spacing-small);
-}
-
-.triangleFooter-content-copyleft{
+.triangleFooter-content-formContainer label{
     display: block;
     width: 100%;
-    margin-top: var(--triangleFooter-padding);
-    padding-top: var(--global_spacing-owl);
 
+    font-size: var(--global_fontSize-body-large);
     text-align: center;
-    font-size: var(--global_fontSize-body-smaller);
-
-    border-top: 1px solid #555;
 }
-.triangleFooter-content-copyleft-symbol{
-    display: inline-block;
-    transform: rotate(180deg);
-    font-size: 1.2em;
+.triangleFooter-content-formContainer input,
+.triangleFooter-content-formContainer textarea{
+    width: 100%;
+
+    font-size: var(--global_fontSize-body-medium);
+}
+
+
+.triangleFooter-content-formContainer .sc-button{
+    font-size: var(--global_fontSize-body-large);
+    padding: var(--global_spacing-small);
+
+    background-color: var(--triangleFooter-submitButtonColor);
+    color: var(--brand_color-lightShade1);
 }
 
 
@@ -180,7 +166,7 @@
     transform-origin: left bottom;
     transform: rotate(60deg);
 
-    background-color: var(--triangleFooter-color-bg);
+    background-color: var(--triangleFooter-color);
     filter: brightness(110%);
 
     box-shadow: 0 0 10px 2px rgba(44, 44, 44, 0.8);
@@ -190,35 +176,24 @@
 
 @media(min-width: 500px){
     .triangleFooter-content-container{
-        /* padding: var(--global_spacing-small) var(--global_spacing-large) var(--global_spacing-large); */
         padding: var(--global_spacing-small) var(--global_spacing-large);
     }
-    .triangleFooter-content-innerContainer label,
-    .triangleFooter-content-innerContainer label {
+    .triangleFooter-content-formContainer label,
+    .triangleFooter-content-formContainer label {
         font-size: var(--global_fontSize-body-medium);
     }
-    .triangleFooter-content-title{
+    .triangleFooter-content-formTitle{
         font-size: var(--global_fontSize-title-medium)
     }
-    .triangleFooter-content-innerContainer .triangleFooter-content-emailLabel,
-    .triangleFooter-content-innerContainer .triangleFooter-content-emailInput {
+    .triangleFooter-content-formContainer .triangleFooter-content-emailLabel,
+    .triangleFooter-content-formContainer .triangleFooter-content-emailInput {
         width: calc(50% - var(--triangleFooter-padding));
     }
-    .triangleFooter-content-innerContainer .triangleFooter-content-emailLabel{
+    .triangleFooter-content-formContainer .triangleFooter-content-emailLabel{
         text-align: end;
         margin-right:var(--triangleFooter-padding);
     }
-    .triangleFooter-content-innerContainer .triangleFooter-content-emailInput{
+    .triangleFooter-content-formContainer .triangleFooter-content-emailInput{
         margin-left:var(--triangleFooter-padding) ;
-    }
-}
-
-
-@media(min-width: 960px){
-    .triangleFooter-content-container{
-        justify-content: space-around;
-    }
-    .triangleFooter-content-socialLink {
-        width: 40%;
     }
 }
