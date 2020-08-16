@@ -126,6 +126,7 @@
 .triangleFooter-content-socialLink{
     width: 80%;
     color: var(--triangleFooter-color-links);
+    text-decoration: underline;
 }
 .triangleFooter-content-socialLink *{
     margin-top: 0;

@@ -36,12 +36,12 @@ function slideInProjectCheck(){
 function openModal(){
     this.parentElement.classList.add('projectModal-open');
     document.body.classList.add('projectModal-open-noScroll');
-    console.log('added class');
+    // console.log('added class');
 }
 function closeModal(){
     this.parentElement.classList.remove('projectModal-open');
     document.body.classList.remove('projectModal-open-noScroll');
-    console.log('removed class');
+    // console.log('removed class');
 }
 
 
