@@ -1,7 +1,21 @@
 doctype html
 html
+
+  include blocks/triangleHeader/triangleHeader
+  include blocks/triangleFooter/triangleFooter
+
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&family=Roboto&display=swap")
+  
   body
+
+    header 
+      +triangleHeader
+
     block content
+
+
+    footer.sc-parallaxBg
+      +triangleFooter
