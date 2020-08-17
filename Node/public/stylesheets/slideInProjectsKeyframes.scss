@@ -1,0 +1,15 @@
+
+@keyframes slideIn{
+    0%{
+        left: -100vw;
+    }
+    100%{
+        left: 0;
+    }
+}
+.slideInProjects-slidingIn{
+    position: relative;
+    animation-name:slideIn;
+    animation-duration: var(--global_timing-transitionDuration-large);
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}

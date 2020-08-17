@@ -1,0 +1,36 @@
+
+
+.quickAbout-container{
+
+
+    padding: var(--global_spacing-medium);
+    position: relative;
+
+}
+.quickAbout-container * + *{margin-top: var(--global_spacing-owl);}
+
+.quickAbout-bgShader{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 100%);
+}
+.quickAbout-aboveBg{
+    position: relative;
+    z-index: 5;
+}
+
+
+.quickAbout-title{
+    font-size: var(--global_fontSize-title-small);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.quickAbout-container p{
+    font-size: var(--global_fontSize-body-medium);
+}

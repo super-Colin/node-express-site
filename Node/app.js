@@ -4,13 +4,28 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const sassMiddleware = require('node-sass-middleware');
+
+const compression = require('compression');
+const helmet = require('helmet');
+
 const indexRouter = require('./routes/index');
 
 const app = express();
 
+app.use(helmet());
+app.use(compression());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+app.use(sassMiddleware({
+  src: path.join(__dirname, 'public'),
+  dest: path.join(__dirname, 'public'),
+  indentedSyntax: false, // true = .sass and false = .scss
+  sourceMap: true
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
