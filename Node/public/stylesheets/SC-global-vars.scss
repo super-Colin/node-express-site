@@ -3,6 +3,14 @@
     font-size: calc(3.89vw + 2.5px); /* 16px at 360px VW */
 
 
+    --brand_fontFamily-title: 'Oswald', sans-serif;
+    --brand_fontWeight-title-main: 500;
+    --brand_fontFamily-body: 'Roboto', sans-serif;
+    --brand_fontWeight-body-main: 400;
+    --brand_fontFamily-accent: 'Montserrat', sans-serif;
+    --brand_fontWeight-accent-main: 400;
+
+
     --brand_color-lightShade1-constant: #F2ECE7;
     --brand_color-lightShade1: #F2ECE7;
 
@@ -161,6 +169,11 @@ img{max-width:100%}
 }
 
 li {list-style: none;}
+
+svg{
+    min-width: 1em;
+    min-height: 1em;
+}
 
 .sc-whiteLink{color: var(--brand_color-lightShade1);}
 .sc-lightLink{color: var(--brand_color-lightAccent1);}

@@ -123,16 +123,16 @@
     text-align: center;
     font-size: var(--global_fontSize-title-large);
 }
-.triangleFooter-content-socialLink{
+.triangleFooter-content-link{
     width: 80%;
     color: var(--triangleFooter-color-links);
     text-decoration: underline;
 }
-.triangleFooter-content-socialLink *{
+.triangleFooter-content-link *{
     margin-top: 0;
 }
 
-.triangleFooter-content-socialLink svg {
+.triangleFooter-content-link svg {
     display: inline-block;
     max-width: 1.5em;
     max-height: 1.5em;
@@ -219,7 +219,7 @@
     .triangleFooter-content-container{
         justify-content: space-around;
     }
-    .triangleFooter-content-socialLink {
+    .triangleFooter-content-link {
         width: 40%;
     }
 }
