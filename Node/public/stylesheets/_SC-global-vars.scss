@@ -133,17 +133,21 @@ img{max-width:100%}
 .sc-button {
     border: none;
     border-radius: 0.2em;
+    padding: 0;
 
-    transform: perspective(500px) translate3d(0);
+    // transform: perspective(500px) translate3d(0);
     transition:
+        // height var(--global_timing-transitionDuration-small),
+        // width var(--global_timing-transitionDuration-small),
+        padding var(--global_timing-transitionDuration-small),
         border-radius var(--global_timing-transitionDuration-small),
-        transform var(--global_timing-transitionDuration-small),
         box-shadow var(--global_timing-transitionDuration-small);
 
 }
 .sc-button:hover {
     box-shadow: 0 0 10px 2px rgba(44, 44, 44, 0.7);
-    transform: perspective(500px) translate3d(0, 0, 5rem);
+    padding: 0.75em 1.5em;
+    // transform: perspective(500px) translate3d(0, 0, 5rem);
     border-radius: 0.4em;
 }
 
