@@ -1,0 +1,166 @@
+
+.slideInProjects-container{
+    --slideInProjects-lightBg: var(--global_color-midDarkGray1);
+    --slideInProjects-darkBg: var(--global_color-darkGray1);
+    
+    --slideInProjects-links-padding: var(--global_spacing-small);
+    --slideInProjects-buttonFadeIn: var(--global_timing-transitionDuration-small);
+
+    
+    background-color: var(--slideInProjects-lightBg);
+    padding: var(--global_spacing-medium);
+
+    border-top: 0.5rem solid var(--brand_color-main1);
+}
+.slideInProjects-container * + *{margin-top: var(--global_spacing-owl);}
+
+
+.slideInProjects-projects-title{
+    text-align: center;
+    font-size: var(--global_fontSize-title-large);
+}
+.slideInProjects-projects-project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: var(--global_spacing-small);
+
+    border-radius: 0.3em;
+    border: 0.1em solid #111;
+    background-color: var(--slideInProjects-darkBg);
+}
+
+.slideInProjects-projects-project-image{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slideInProjects-projects-project-image > img{
+    width: 100%;
+    max-height: 18em;
+
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+    cursor: pointer;
+}
+.slideInProjects-projects-project-image-modal{
+    visibility: hidden;
+    margin: 0;
+    padding: var(--global_spacing-medium);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+
+    cursor: pointer;
+}
+.slideInProjects-projects-project-image-modal > *{
+    cursor: default;
+    text-align: center;
+}
+.slideInProjects-projects-project-image-modal img{
+    position: relative;
+    z-index: 101;
+    object-fit: contain;
+
+    min-width: 50%;
+    max-width: 75%;
+    min-height: 50%;
+    max-height: 75%;
+}
+.slideInProjects-projects-project-image-modal span{
+    width: 100%;
+    margin-top: var(--global_spacing-medium);
+    
+    font-size: var(--global_fontSize-title-medium);
+    font-weight: bold;
+    text-align: center;
+}
+
+.projectModal-open .slideInProjects-projects-project-image-modal{
+    visibility: visible;
+    z-index: 99;
+}
+
+
+.slideInProjects-projects-project-textContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.slideInProjects-projects-project-title {
+    width: 100%;
+    font-size: var(--global_fontSize-title-small);
+    
+}
+
+.slideInProjects-projects-project-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.slideInProjects-projects-project-links a{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0;
+    padding: var(--slideInProjects-links-padding);
+
+    color: var(--brand_color-lightShade1);
+    font-size: var(--global_fontSize-body-large);
+
+    border-radius:  1.5em;
+    background-color: var(--brand_color-darkAccent1);
+}
+.slideInProjects-projects-project-links svg{
+    display: block;
+    max-height: 1em;
+    margin-right: var(--slideInProjects-links-padding);
+    fill: var(--brand_color-lightShade1);
+}
+
+.slideInProjects-projects-project-about{
+    font-size: var(--global_fontSize-body-medium);
+}
+
+@media(min-width: 500px){
+    .slideInProjects-projects-project-image {
+        max-width: 40%;
+    }
+    .slideInProjects-projects-project-textContainer {
+        margin-top: 0;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 920px) {
+    .slideInProjects-projects-project {
+        padding:var(--global_spacing-medium);
+    }
+    .slideInProjects-projects-project-about{
+        font-size: var(--global_fontSize-body-medium);
+    }
+}
+@media(min-width: 1200px) {
+    .slideInProjects-projects-project-image {
+        max-width: 33%;
+    }
+    .slideInProjects-projects-project-textContainer {
+        width: 63%;
+    }
+}

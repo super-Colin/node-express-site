@@ -1,0 +1,131 @@
+{
+    "superColinSkills" : {
+        "Congrats!":{ "/:FLAG;":"123456789:/"},
+
+        "Coding":{
+            "Languages?":{
+                "HTML":{},
+                "CSS":{},
+                "Javascript":{},
+                "C++":{},
+                "Python":{},
+                "PHP":{},
+            },
+            "Stacks":{
+                "LAMP":{
+                    "Linux":{
+
+                    },
+                    "Apache 2":{},
+                    "MySQL 5":{},
+                    "PHP 7":{},
+                    "Wordpress":{
+                        "Theme Development":{
+                            "_underscores":{},
+                            "Advanced Custom Fields":{}
+                        },
+                        "Backups":{},
+                        "Security Updates":{}
+                    }
+                },
+                "MEAN":{
+                    "MongoDB":{
+                        "Mongoose":{},
+                        "CRUD":{},
+                        "ACID Compliant":{}
+                    },
+                    "Express":{
+                        "Templates":{},
+                        "Request, Response":{}
+                    },
+                    "Angular 9":{
+                        "Modular Code":{},
+                        "Templates":{},
+                    },
+                    "Node.js":{
+                        "Emviornment Variables":{},
+                        "jsdom":{},
+                        "chalk":{}
+                    }
+                }
+            },
+
+
+            "Front End" : {
+
+                "HTML" : {
+                    "HTML5":{},
+                    "Accessibility":{
+                        "WCAG 2.1":{}
+                    },
+                    "Pug Template Engine":{}
+                },
+                "CSS":{
+                    "CSS3":{
+                        "Media Queries": {},
+                        "var()": {},
+                        "calc()": {},
+                        "Flexbox": {},
+                        "Psuedo Elements": {},
+                        "Transitions": {},
+                        "Border Radius": {},
+                        "Box Shadow": {},
+                        "Transform":{},
+                        "!important":{}
+                    },
+                    "SASS": {},
+                    "LESS": {},
+                    "BEM":{}
+                },
+                "Javascript":{
+                    "ECMAScript 6":{
+                        "Async / Await": {},
+                        "Arrow Functions":{},
+                        "let / const":{},
+                        "Default Parameters":{}
+                    },
+                    "D3":{},
+                    "JSON":{}
+                }
+            },
+
+
+            "Back End" : {
+                "Persistant Storage":{
+                    "MongoDB":{}
+                },
+                "Data Architecture": {}
+            }
+
+        },
+
+
+        "Design" : {
+            "Marketing": {
+                "Brand Identity":{}
+            },
+            "Visual":{
+                "Color Schemes":{}
+            },
+            "User Experience":{
+                "Accessibility":{}
+            },
+            "User Interface": {
+                "Accessibility":{}
+            },
+            "":{}
+        }
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+

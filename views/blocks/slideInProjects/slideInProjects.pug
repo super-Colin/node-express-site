@@ -1,0 +1,82 @@
+
+mixin slideInProjects
+
+    - 
+        const projectsArray = [
+            {
+                "title":"This Site",
+                "about": "This site is built in Node.js using the express library to handle the backend, and modular pug templated HTML for the frontend. I also did 100% of the design.",
+                "imageLink":"/images/sc-nodeCode.png",
+                "imageAltText": "The entire index.pug file rendering this page",
+                "codeLink":"https://github.com/super-Colin/node-express-site",
+                "demoLink":""
+            },
+            {
+                "title": "Python Lessons",
+                "about": "I've started teaching some friends programming using Python as the teaching language so I've been creating ordered lessons and teaching them interactively in video chats while sharing my screen. I've learned a lot about how to teach a group of people and lead an online meeting. It's also been a great way to re-enforce my knowledge.",
+                "imageLink":"/images/pythonShot.png",
+                "imageAltText": "The start of our first OOP lesson",
+                "codeLink":"https://github.com/super-Colin/coding-lessons",
+                "demoLink":""
+            },
+            {
+                "title": "Screeps",
+                "about": "Screeps is a game where you write scripts to control an ever-growing army of mindless entities that have no functionality outside of your scripts. Yes, even the video games I play involve programming...",
+                "imageLink":"/images/screepsShot.png",
+                "imageAltText": "The spiral of buildings the script creates as it levels up",
+                "codeLink":"https://github.com/super-Colin/coding-lessons",
+                "demoLink":""
+            }
+            //- {
+            //-     "title": "Hackathon",
+            //-     //- "about": "I'm not super proud but I coordinated the team and accepted strangers on the team",
+            //-     "about": "My first hackathon, a great experience! My partner and I ended up with 2 people who couldn't find a group to participate with, after we had decided to do something with the R language, which noone but my intended partner was very familiar with. Chaos insued and we ended up needing the 5 minute grace period to submit our work.",
+            //-     "imageLink":"/images/square300.png",
+            //-     "imageAltText": "",
+            //-     "codeLink":"https://github.com/super-Colin/coding-lessons",
+            //-     "demoLink":"#"
+            //- }
+        ];
+
+
+    div.slideInProjects-container
+        div.slideInProjects-projects-container
+            h2.slideInProjects-projects-title.sc-title Projects
+
+            each projectObject in projectsArray
+                div.slideInProjects-projects-project
+
+                    div.slideInProjects-projects-project-image
+                        img(src=projectObject.imageLink)
+
+                        div.slideInProjects-projects-project-image-modal
+                            img(src=projectObject.imageLink)
+                            p= projectObject.imageAltText
+                            span Click Anywhere To Close
+
+                    div.slideInProjects-projects-project-textContainer
+
+                        div.slideInProjects-projects-project-title
+                            //- h3 This Site
+                            h3.sc-title= projectObject.title
+
+                        div.slideInProjects-projects-project-about
+                            //- p This site is built in Node.js using the express library to handle the backend, and modular pug templated HTML for the frontend. I also designed the look and feel myself.
+                            p= projectObject.about
+
+                        div.slideInProjects-projects-project-links
+                                a(href=projectObject.codeLink target="_blank").slideInProjects-projects-project-links-code.sc-button 
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-482.9 365.1 39.9 38.8"> <path d="M-465.2,365.2c-9.2,1-16.6,8.4-17.6,17.4c-1,9.4,4.4,17.8,12.6,21c0.6,0.2,1.2-0.2,1.2-1v-3.2c0,0-0.8,0.2-1.8,0.2 c-2.8,0-4-2.4-4.2-3.8c-0.2-0.8-0.6-1.4-1.2-2c-0.6-0.2-0.8-0.2-0.8-0.4c0-0.4,0.6-0.4,0.8-0.4c1.2,0,2.2,1.4,2.6,2 c1,1.6,2.2,2,2.8,2c0.8,0,1.4-0.2,1.8-0.4c0.2-1.4,0.8-2.8,2-3.6c-4.6-1-8-3.6-8-8c0-2.2,1-4.4,2.4-6c-0.2-0.4-0.4-1.4-0.4-2.8 c0-0.8,0-2,0.6-3.2c0,0,2.8,0,5.6,2.6c1-0.4,2.4-0.6,3.8-0.6c1.4,0,2.8,0.2,4,0.6c2.6-2.6,5.6-2.6,5.6-2.6c0.4,1.2,0.4,2.4,0.4,3.2 c0,1.6-0.2,2.4-0.4,2.8c1.4,1.6,2.4,3.6,2.4,6c0,4.4-3.4,7-8,8c1.2,1,2,2.8,2,4.6v5.2c0,0.6,0.6,1.2,1.4,1c7.4-3,12.6-10.2,12.6-18.6C-443,373.2-453.2,363.8-465.2,365.2z"/></svg>
+                                    |  Code
+
+                                if ! projectObject.demoLink == ""
+                                    a(href=projectObject.demoLink target="_blank").slideInProjects-projects-project-links-demo.sc-button 
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 300" ">
+                                            <path d="M221.755,89.414H78.242c-1.432,0-2.594,1.162-2.594,2.594v95.963c0,1.432,1.162,2.594,2.594,2.594h143.513 c1.432,0,2.594-1.162,2.594-2.594V92.007C224.349,90.576,223.187,89.414,221.755,89.414z"/>
+                                            <path d="M149.996,0C67.157,0,0.001,67.161,0.001,149.997S67.157,300,149.996,300s150.003-67.163,150.003-150.003 S232.835,0,149.996,0z M242.504,187.97c0,11.458-9.29,20.749-20.749,20.749h-47.144v11.588h23.801 c4.298,0,7.781,3.483,7.781,7.781c0,4.298-3.483,7.781-7.781,7.781h-96.826c-4.298,0-7.781-3.483-7.781-7.781 c0-4.298,3.483-7.781,7.781-7.781h23.801v-11.588H78.242c-11.458,0-20.749-9.29-20.749-20.749V92.007 c0-11.458,9.29-20.749,20.749-20.749h143.513c11.458,0,20.749,9.29,20.749,20.749V187.97z"/>
+                                        </svg> Demo
+
+
+
+
+
