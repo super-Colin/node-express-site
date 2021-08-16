@@ -20,7 +20,7 @@
     "morgan": "~1.9.1",
     "node-sass-middleware": "^0.11.0",
     "postcss-cli": "^7.1.1",
-    "pug": "2.0.0-beta11"
+    "pug": "3.0.1"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
